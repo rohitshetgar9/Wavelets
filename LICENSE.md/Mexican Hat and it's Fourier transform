@@ -1,0 +1,35 @@
+% the mexican hat andt its Fourier transform
+
+N = 1024;
+
+t = -5 + 10*(1:N)/N;
+
+t1 = 0 + 7*(1:N)/N;
+
+omega =  4*pi*(1:N)/N;
+
+cnormal = 2/(sqrt(sqrt(pi)*3))./3;
+
+cfnormal = sqrt(2)*cnormal;
+
+mh = cnormal*exp((-t.^2)./2).*(1-t.^2);
+
+ftmh = cfnormal*(omega.^2).*exp((-omega.^2)./2);
+
+figure(1);clf;
+
+subplot(211), plot(t,mh),title('mexican hat')
+
+xL = xlim;
+
+yL = ylim;
+
+line([0 0],yL);%x-axis
+
+line(xL,[0 0]);%y-axis
+
+subplot(212), plot(t1,ftmh),title('Fourier transform of mexican hat')
+
+
+
+
