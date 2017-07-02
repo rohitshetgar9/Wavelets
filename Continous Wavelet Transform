@@ -1,0 +1,15 @@
+N = 1024;
+
+t =2*(1:N)/N+1;
+
+p = -2/N + 3*(10:(N-3))/N;
+
+r = 7/N + 6*(682:(N-3))/N;
+
+cnormal =2.883* (2-2*abs(t-2));
+
+cnormal2 = 1.205* (1-cos(2*pi*p));
+  
+cnormal3 = 0.968* (0.5*(1-cos(5*pi*r)));
+
+plot(t-4,cnormal,p,cnormal2,r,cnormal3),title('FT of conts')
