@@ -1,0 +1,6 @@
+wavemenu
+load('leleccum.mat')
+x=leleccum(1,1:1000);
+x
+save('shortleleccum.mat','x');
+
