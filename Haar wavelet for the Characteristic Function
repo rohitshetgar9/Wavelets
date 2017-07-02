@@ -1,0 +1,17 @@
+[x, y] = meshgrid(0.01:0.01:0.15, -1.2:0.1:1.2);
+
+Z = sin(x)+cos(y);
+
+figure
+
+contour(x,y,Z)
+
+meshc(x, y, Z);
+
+xlabel('x');
+
+ylabel('y');
+
+zlabel('z');
+
+title('z');
